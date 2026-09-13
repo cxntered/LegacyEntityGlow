@@ -1,0 +1,1 @@
+LegacyEntityGlow's initial release! 🎉

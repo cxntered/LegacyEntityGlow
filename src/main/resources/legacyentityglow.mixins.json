@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "dev.cxntered.legacyentityglow.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "EntityInvoker",
+    "LivingEntityRenderer_RenderGlow",
+    "WorldRenderer_ForceGlow"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

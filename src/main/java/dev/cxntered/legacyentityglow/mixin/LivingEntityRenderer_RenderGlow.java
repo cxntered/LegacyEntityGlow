@@ -56,6 +56,7 @@ abstract class LivingEntityRenderer_RenderGlow<T extends LivingEntity> extends E
             }
         }
 
+        RenderUtils.setSolidRendering(true);
         GlStateManager.enableColorMaterial();
         RenderUtils.setupSolidRenderingTextureCombine(color);
     }
@@ -72,6 +73,7 @@ abstract class LivingEntityRenderer_RenderGlow<T extends LivingEntity> extends E
 
         RenderUtils.tearDownSolidRenderingTextureCombine();
         GlStateManager.disableColorMaterial();
+        RenderUtils.setSolidRendering(false);
     }
 
     @WrapMethod(method = "method_10259")

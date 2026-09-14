@@ -8,6 +8,7 @@ import java.nio.FloatBuffer;
 
 public class RenderUtils {
     private static final FloatBuffer COLOR_BUFFER = BufferUtils.createFloatBuffer(4);
+    private static boolean solidRendering = false;
 
     public static void setupSolidRenderingTextureCombine(int color) {
         COLOR_BUFFER.put(0, (color >> 16 & 0xFF) / 255.0F);
@@ -32,5 +33,13 @@ public class RenderUtils {
         GL11.glTexEnvi(GL11.GL_TEXTURE_ENV, GLX.source0Alpha, GLX.textureUnit);
         GL11.glTexEnvi(GL11.GL_TEXTURE_ENV, GLX.operand0Rgb, GL11.GL_SRC_COLOR);
         GL11.glTexEnvi(GL11.GL_TEXTURE_ENV, GLX.operand0Alpha, GL11.GL_SRC_ALPHA);
+    }
+
+    public static boolean isSolidRendering() {
+        return solidRendering;
+    }
+
+    public static void setSolidRendering(boolean solidRendering) {
+        RenderUtils.solidRendering = solidRendering;
     }
 }

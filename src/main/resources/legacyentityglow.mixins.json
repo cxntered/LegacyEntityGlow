@@ -3,7 +3,9 @@
   "package": "dev.cxntered.legacyentityglow.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
+    "ArmorFeatureRendererMixin_FixDyedArmorGlow",
     "EntityInvoker",
+    "ItemRendererMixin_FixTintedItemGlow",
     "LivingEntityRenderer_RenderGlow",
     "WorldRenderer_ForceGlow"
   ],

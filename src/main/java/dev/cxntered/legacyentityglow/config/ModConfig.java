@@ -12,6 +12,7 @@ public class ModConfig extends BaseConfig {
     public static final FileSerializerType<JsonFile> SERIALIZER_TYPE = SerializerTypes.register("legacyentityglow:flat_json", JsonFile::new);
 
     public static final BooleanOption enabled = new BooleanOption("Enabled", "Enable or disable the mod.", true);
+    public static final BooleanOption outlineLayers = new BooleanOption("Outline Layers", "Outline entity layers/held items like on 1.9+.", true);
 
     @Override
     public String getNamespace() {
@@ -50,6 +51,6 @@ public class ModConfig extends BaseConfig {
 
     @Override
     public void init() {
-        registerOptions("General", enabled);
+        registerOptions("General", enabled, outlineLayers);
     }
 }

@@ -13,6 +13,7 @@ public class ModConfig extends BaseConfig {
 
     public static final BooleanOption enabled = new BooleanOption("Enabled", "Enable or disable the mod.", true);
     public static final BooleanOption outlineLayers = new BooleanOption("Outline Layers", "Outline entity layers/held items like on 1.9+.", true);
+    public static final BooleanOption forceSelfGlow = new BooleanOption("Force Self Glow", "Force yourself to be glowing.", false);
 
     @Override
     public String getNamespace() {
@@ -51,6 +52,6 @@ public class ModConfig extends BaseConfig {
 
     @Override
     public void init() {
-        registerOptions("General", enabled, outlineLayers);
+        registerOptions("General", enabled, outlineLayers, forceSelfGlow);
     }
 }

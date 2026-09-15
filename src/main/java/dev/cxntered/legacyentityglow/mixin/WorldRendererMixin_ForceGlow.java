@@ -28,7 +28,7 @@ abstract class WorldRendererMixin_ForceGlow {
     @ModifyExpressionValue(method = "renderEntities", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;shouldRender(DDD)Z", ordinal = 1))
     private boolean forceRenderGlow(boolean original, Entity entity, @Local(ordinal = 2) Entity entity3) {
         boolean showSpectatorOutline = this.client.player.isSpectator() && this.client.options.spectatorOutlines.isPressed();
-        boolean isEntityGlowing = ModConfig.enabled.get() && ((EntityInvoker) entity3).invokeGetFlag(6);
+        boolean isEntityGlowing = ModConfig.enabled.get() && ((EntityInvoker) entity3).legacyentityglow$getFlag(6);
         return original && (isEntityGlowing || showSpectatorOutline);
     }
 }

@@ -6,6 +6,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 
 @Mixin(Entity.class)
 public interface EntityInvoker {
-    @Invoker
-    boolean invokeGetFlag(int i);
+    @Invoker("getFlag")
+    boolean legacyentityglow$getFlag(int i);
 }

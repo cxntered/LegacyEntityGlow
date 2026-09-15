@@ -22,11 +22,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LivingEntityRenderer.class)
-abstract class LivingEntityRenderer_RenderGlow<T extends LivingEntity> extends EntityRenderer<T> {
+abstract class LivingEntityRendererMixin_RenderGlow<T extends LivingEntity> extends EntityRenderer<T> {
     @Shadow protected abstract void renderFeatures(T livingEntity, float f, float g, float h, float i, float j, float k, float l);
 
     @SuppressWarnings("unused")
-    protected LivingEntityRenderer_RenderGlow(EntityRenderDispatcher entityRenderDispatcher) {
+    protected LivingEntityRendererMixin_RenderGlow(EntityRenderDispatcher entityRenderDispatcher) {
         super(entityRenderDispatcher);
     }
 

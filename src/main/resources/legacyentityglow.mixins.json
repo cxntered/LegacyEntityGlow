@@ -6,8 +6,8 @@
     "ArmorFeatureRendererMixin_FixDyedArmorGlow",
     "EntityInvoker",
     "ItemRendererMixin_FixTintedItemGlow",
-    "LivingEntityRenderer_RenderGlow",
-    "WorldRenderer_ForceGlow"
+    "LivingEntityRendererMixin_RenderGlow",
+    "WorldRendererMixin_ForceGlow"
   ],
   "injectors": {
     "defaultRequire": 1

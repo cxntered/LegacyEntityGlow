@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(WorldRenderer.class)
-abstract class WorldRenderer_ForceGlow {
+abstract class WorldRendererMixin_ForceGlow {
     @Shadow @Final private MinecraftClient client;
 
     @ModifyExpressionValue(method = "isEntityOutline", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/ClientPlayerEntity;isSpectator()Z"))
